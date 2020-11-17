@@ -1,0 +1,623 @@
+@font-face {
+  font-family: "AZeeBee";
+  src: url("./ABeeZee-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./Roboto-Regular.ttf") format("truetype");
+}
+
+.nav {
+  height: 66px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.logo {
+  width: 102px;
+  height: 31px;
+  margin-left: 50px;
+}
+
+.main_logo {
+  width: 280px;
+  height: 85px;
+  margin-top: 200px;
+}
+
+ .nav_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 46px;
+  font-family: "AZeeBee";
+  font-weight: 600;
+  text-decoration: none;
+  color: rgb(122, 122, 122);
+}
+
+.nav_item.active, .nav_item:hover {
+  color: #7161EF;
+  border-bottom: 4px solid #7161EF;
+}
+
+.content_nav_item {
+  width: 400px;
+  display: flex;
+  margin-left: calc(100% - 600px);
+  justify-content: space-between;
+}
+
+.main_accueil {
+  height: calc(120vh - 66px);
+}
+
+.accueil {
+  background-image: url('accueil.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #eaeae9;
+  background-attachment: fixed;
+}
+
+.content_border {
+  display: flex;
+  justify-content: center;
+}
+
+.border {
+  width: 200px;
+  height: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid;
+}
+
+.background_accueil {
+  background-color: #FFFFFF;
+  opacity: 0.7;
+  height: calc(120vh + 34px);
+}
+
+.triangle {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 500px 100px 500px;
+  border-color: transparent transparent #7161EF transparent;
+  bottom: calc(-20vh - 100px);
+}
+
+.triangle_apropos_one {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent #7161EF transparent transparent;
+}
+.triangle_apropos_two {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent transparent #a69cf5;
+  position: relative;
+  top: -100px;
+}
+.triangle_apropos_three {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #dcd8fb transparent transparent transparent;
+  position: relative;
+  top: -100px;
+}
+.sur_ligne_accueil {
+  width: 100%;
+  position: absolute;
+  top: 66px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: "AZeeBee";
+  font-weight: 600;
+  font-size: 29px;
+  text-align: center;
+}
+
+.paraph_accueil {
+  font-family: "AZeeBee";
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.why {
+  margin: 0;
+  background-color: #7161EF;
+  height: 70vh;
+}
+
+.why_title {
+  margin: 0;
+  text-align: center;
+  font-family: "AZeeBee";
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0px 5px 4px #000;
+}
+
+.why_content {
+  display: flex;
+  margin-top: 80px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.why_item {
+  background-color: #fff;
+  width: 210px;
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 0px #000000;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.why_item_title {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "AZeeBee";
+  color: #7161EF;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+.why_item_image {
+  margin-top: 20px;
+}
+
+.why_item_paraph {
+  margin-top: 0;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "AZeeBee";
+  color: #7161EF;
+  text-align: center;
+}
+
+.why_triangle_left {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #7161EF transparent transparent transparent;
+}
+
+.apropos_triangle_left {
+  position: relative;
+  top: 150px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.why_triangle_right {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #7161EF transparent transparent transparent;
+  margin-left: 50%;
+  top: -100px;
+  position: relative;
+  z-index: -10;
+}
+
+.apropos_triangle_right {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  margin-left: 50%;
+  top: 50px;
+  position: relative;
+  z-index: 0;
+}
+
+.service_title {
+  text-align: center;
+  color: #7161EF;
+  font-family: "AZeeBee";
+  font-size: 40px;
+  font-weight: 600;
+  text-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+}
+
+.services {
+  padding-top: 50px;
+}
+
+.content_service {
+  height: 100vh;
+  position: relative;
+}
+
+.service_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 340px;
+  padding: 10px;
+  position: absolute;
+}
+
+.service_item.one {
+  top: 0;
+  left: 0;
+}
+
+.service_item.two {
+  top: 0;
+  right: 0;
+}
+
+.service_item.three {
+  bottom: 0;
+  left: 0;
+}
+
+.service_item.four {
+  bottom: 0;
+  right: 0;
+}
+
+.service_img {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 630px;
+}
+
+.service_item_img {
+  width: 106px;
+  height: 106px;
+}
+
+.service_item_title {
+  font-family: "AZeeBee";
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.service_item_paraph {
+  color: #545454;
+  font-family: "Roboto";
+  font-size: 17px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 31px;
+}
+
+.apropos {
+  height: 220vh;
+  background-color: #7161EF;
+  padding-top: 100px;
+}
+
+.apropos_title {
+  text-align: center;
+  font-family: "AZeeBee";
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0px 5px 4px #000;
+}
+
+.idriss {
+  width: 534px;
+  height: 622px;
+}
+.erwan {
+  width: 534px;
+}
+.content_profil {
+  background-color: #fff;
+  width: 534px;
+  height: 622px;
+  border: 7px double;
+  transform:  rotateX(5deg) rotateY(-5deg);
+  position: absolute;
+  left: 50px;
+  top: 0;
+  overflow: hidden;
+}
+
+.apropos_content {
+  position: relative;
+}
+
+.apropos_content:last-child {
+  position: relative;
+  top: 100vh;
+}
+
+
+.content_paraph_apropos {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  width: 500px;
+}
+
+.apropos_paraph {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.apropos_sub_title {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "AZeeBee";
+  color: #fff;
+}
+
+.apropos_titre {
+  font-size: 17px;
+  font-weight: 400;
+  font-family: "AZeeBee";
+  color: rgb(213, 213, 213);
+}
+
+.paraph_apropos {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: "AZeeBee";
+  line-height: 31px;
+}
+
+.apropos_item_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.apropos_item_right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.contact_title {
+  text-align: center;
+  color: #7161EF;
+  font-family: "AZeeBee";
+  font-size: 40px;
+  font-weight: 600;
+  text-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+}
+
+.content_contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.coordonnee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact_paraph {
+  display: flex;
+ font-family: "AZeeBee";
+ font-size: 17px;
+ font-weight: 400;
+ align-items: center;
+}
+.contact_layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer {
+  position: relative;
+  height: 227px;
+  background-color: #7161EF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header {
+  height: 227px;
+  background-color: #7161EF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header_title {
+  font-family: "AZeeBee";
+  font-size: 40px;
+  font-weight: 900;
+  color: #fff;
+}
+.mentions {
+  position: absolute;
+  right: 50px;
+  color: #e8c3ef;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mentions a {
+  font-family: "AZeeBee";
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.input {
+  width: 320px;
+  height: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-family: "AZeeBee";
+  font-size: 17px;
+}
+
+.input.area {
+  height: 150px;
+}
+.input.submit {
+  height: 30px;
+  border-radius: 0;
+  background-color: #ff4087;
+  color: #fff;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.title_footer {
+  color: #fff;
+  font-family: "AZeeBee";
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+}
+.contactez {
+  background-color: #ff2979;
+  color: #fff;
+  font-family: "AZeeBee";
+  font-size: 20px;
+  font-weight: 700;
+  width: 220px;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar {
+  justify-content: center;
+  align-items: center;
+  background-color: #7161EF;
+  width: 50px;
+  height: 50px;
+  display: none;
+  margin-top: 10px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .apropos {
+    height: auto;
+    height: 400vh;
+  }
+  .content_paraph_apropos {
+    position: relative;
+    left: calc(50% - 250px);
+    top: 50px;
+  }
+  .content_profil {
+    position: relative;
+    left: calc(50% - 267px);
+  }
+  .apropos_content:last-child {
+    position: relative;
+    top: 100px;
+  }
+}
+
+@media screen and (max-width: 1016px) {
+  .why {
+    height: 140vh;
+  }
+  .content_service {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .service_item {
+    position: static;
+    margin-bottom: 50px;
+  }
+  .service_img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .mentions{
+    position: static;
+  }
+
+  .footer {
+    padding-top: 50px;
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content_nav_item {
+    align-items: flex-end;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 70px;
+    background-color: #fff;
+    width: 100px;
+  }
+  .bar {
+    display: flex;
+  }
+  .nav_item {
+    display: none;
+  }
+  .idriss {
+    width: 267px;
+    height: 311px;
+  }
+  .erwan {
+    width: 267px;
+  }
+  .content_profil {
+    width: 267px;
+    height: 311px;
+    left: calc(50% - 133px);
+  }
+  .content_paraph_apropos {
+    width: 250px;
+    left: calc(50% - 125px);
+  }
+}
+
+@media screen and (max-width: 516px) {
+  .why {
+    height: 280vh;
+  }
+}
