@@ -10,8 +10,7 @@ function Home() {
   const accueil = createRef();
   const history = useHistory();
 
-  const [width, setWidth] = useState(0);
-  const [reload, setReload] = useState(false);
+  const [width, setWidth] = useState(document.getElementsByTagName('body')[0].offsetWidth);
 
   const handleMention = () => {
     history.replace('/mentions-legales');
@@ -25,9 +24,12 @@ function Home() {
     document.getElementsByClassName('nav_item active')[0].setAttribute('class', 'nav_item');
     event.target.setAttribute('class', 'nav_item active');
   }
+  const handleContact = () => {
+    document.getElementsByClassName('nav_item active')[0].setAttribute('class', 'nav_item');
+    document.getElementById('id-contact').setAttribute('class', 'nav_item active');
+  }
 
   const resize = () => {
-    console.log(document.getElementsByTagName('body')[0])
     if (document.getElementsByTagName('body')[0] && document.getElementsByTagName('body')[0].offsetWidth >= 600) {
       for (const item of Array.from(document.getElementsByClassName("nav_item"))) {
         item.style.display = "flex";
@@ -37,12 +39,11 @@ function Home() {
         item.style.display = "none";
       } 
     }
-    setTimeout(() => {
-      const newVar = reload;      
-      setReload(!newVar);
-      window.addEventListener('resize', resize);
-    }, 100);
-    window.removeEventListener('resize', resize)
+    if(document.getElementsByTagName('body')[0]) {
+      if(Math.abs(width - document.getElementsByTagName('body')[0].offsetWidth) >= 20) {
+        setWidth(document.getElementsByTagName('body')[0].offsetWidth);
+      }
+    }
   }
 
   useEffect(() => {
@@ -53,10 +54,6 @@ function Home() {
       document.getElementById(`id-${type}`).setAttribute('class', 'nav_item active');
     }
   }, [])
-
-  useEffect(() => {
-    setWidth(accueil.current.offsetWidth)
-  }, [reload])
 
   const handleHide = () => {
     let display = document.getElementsByClassName('nav_item')[0].style.display;
@@ -102,7 +99,7 @@ function Home() {
           Vous avez besoin d’un logiciel, d’une application, ou de toute autre solution informatique ?<br/>
           Nous développons votre projet, et le faisons passer d’idée à réalité !
         </p>
-        <a href="#contact" className="contactez">Contactez-nous !</a>
+        <a href="#contact" onClick={handleContact} className="contactez">Contactez-nous !</a>
       </div>
       <div className="why">
         <h2 className="why_title">Pourquoi nous ?</h2>
