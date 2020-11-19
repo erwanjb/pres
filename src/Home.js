@@ -53,22 +53,22 @@ function Home() {
     const contact = document.getElementById('contact').offsetTop;
     const windowY = window.scrollY;
 
-    if (windowY < services) {
+    if (windowY < services - 10) {
       document.getElementsByClassName('nav_item active')[0].setAttribute('class', 'nav_item');
       document.getElementById(`id-accueil`).setAttribute('class', 'nav_item active');
     }
 
-    if (windowY >= services && windowY < apropos) {
+    if (windowY >= services - 10 && windowY < apropos - 10) {
       document.getElementsByClassName('nav_item active')[0].setAttribute('class', 'nav_item');
       document.getElementById(`id-services`).setAttribute('class', 'nav_item active');
     }
 
-    if (windowY >= apropos && windowY < contact) {
+    if (windowY >= apropos - 10 && windowY < contact - 10) {
       document.getElementsByClassName('nav_item active')[0].setAttribute('class', 'nav_item');
       document.getElementById(`id-apropos`).setAttribute('class', 'nav_item active');
     }
 
-    if (windowY >= contact) {
+    if (windowY >= contact- 10) {
       document.getElementsByClassName('nav_item active')[0].setAttribute('class', 'nav_item');
       document.getElementById(`id-contact`).setAttribute('class', 'nav_item active');
     }
