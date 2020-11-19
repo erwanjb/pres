@@ -46,8 +46,38 @@ function Home() {
     }
   }
 
+  const scroll = () => {
+    const accueil = document.getElementById('accueil').offsetTop;
+    const services = document.getElementById('services').offsetTop;
+    const apropos = document.getElementById('apropos').offsetTop;
+    const contact = document.getElementById('contact').offsetTop;
+    const windowY = window.scrollY;
+
+    if (windowY < services) {
+      document.getElementsByClassName('nav_item active')[0].setAttribute('class', 'nav_item');
+      document.getElementById(`id-accueil`).setAttribute('class', 'nav_item active');
+    }
+
+    if (windowY >= services && windowY < apropos) {
+      document.getElementsByClassName('nav_item active')[0].setAttribute('class', 'nav_item');
+      document.getElementById(`id-services`).setAttribute('class', 'nav_item active');
+    }
+
+    if (windowY >= apropos && windowY < contact) {
+      document.getElementsByClassName('nav_item active')[0].setAttribute('class', 'nav_item');
+      document.getElementById(`id-apropos`).setAttribute('class', 'nav_item active');
+    }
+
+    if (windowY >= contact) {
+      document.getElementsByClassName('nav_item active')[0].setAttribute('class', 'nav_item');
+      document.getElementById(`id-contact`).setAttribute('class', 'nav_item active');
+    }
+
+  }
+
   useEffect(() => {
     window.addEventListener('resize', resize);
+    window.addEventListener('scroll', scroll);
     const type = window.location.href.split('/')[window.location.href.split('/').length -1].slice(1);
     if (type ==='services' || type ===" accueil" || type === "apropos" || type === "contact") {
       document.getElementsByClassName('nav_item active')[0].setAttribute('class', 'nav_item');
